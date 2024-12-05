@@ -6,6 +6,23 @@
 //
 
 import Foundation
+import Algorithms
 
-print("Hello, World!")
+let input = """
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+"""
 
+let matrix = CharMatrix(string: input)
+let search = "XMAS"
+
+let matchCount = matrix.count(occurrencesOf: search, in: SearchDirection.allCases)
+print("Match count \(matchCount)")
